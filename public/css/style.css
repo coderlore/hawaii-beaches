@@ -1,8 +1,33 @@
-/* html{
-    color: white;
-    background-color: black;
-} */
+html{
+    /* color: white;
+    background-color: black; */
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 h1{
     color: red;
+}
+
+.beaches{
+    width: 50%;
+    list-style: none;
+    text-align: left;
+    justify-content: center;
+}
+
+form{
+    display: inline-block;
+}
+
+legend{
+    padding: 20px 0 10px 0;
+}
+
+.submit{
+    display: flex;
+    margin: auto;
+    margin-top: 25px;
+    padding: 5px;
+    border-radius: 2px;
 }
