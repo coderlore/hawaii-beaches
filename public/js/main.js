@@ -18,7 +18,7 @@ async function deleteBeach(){
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
               'beachName': sName,
-              'facilities': bName
+              'restroom': bName
             })
           })
         const data = await response.json()
@@ -42,7 +42,7 @@ async function addLike(){
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
               'beachName': sName,
-              'facilities': bName,
+              'restroom': bName,
               'lifeguard': lName,
               'likesS': tLikes
             })

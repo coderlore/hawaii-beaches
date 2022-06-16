@@ -10,10 +10,38 @@ h1{
 }
 
 .beaches{
-    width: 50%;
     list-style: none;
-    text-align: left;
-    justify-content: center;
+    position: relative;
+    display: inline-block;
+    width: 50%;
+}
+
+li {
+    padding: 2px 0;
+    height: 35px;
+}
+
+span{
+    padding: 5px 8px;
+    margin: 0;
+}
+
+.beach > span {
+    border: 2px blue solid;
+    display:inline-block;
+    float: left;
+    min-width: 50px;
+    /* width: 15%; */
+}
+
+.icons {
+    width: 100px;
+    float: right;
+}
+
+.fa {
+    display: inline-block;
+    border: 2px red solid;
 }
 
 form{

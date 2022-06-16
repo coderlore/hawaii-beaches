@@ -18,16 +18,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>List of Hawaii Beaches</h1>
+    <h1>Best Hawaii Beaches</h1>
     <ul class="beaches">
     <% for(let i=0; i < info.length; i++) {%>
         <li class="beach">
             <span><%= info[i].beachName %></span>
-            <span><%= info[i].facilities %></span>
+            <span><%= info[i].restroom %></span>
             <span><%= info[i].lifeguard %></span>
             <span><%= info[i].likes %></span>
-            <span class='fa fa-thumbs-up'></span>
-            <span class='fa fa-trash'></span>
+            <div class="icons">
+                <span class='fa fa-thumbs-up'></span>
+                <span class='fa fa-trash'></span>
+            </div>
         </li>
     <% } %>
     </ul>
@@ -36,7 +38,11 @@
 
     <form action="/addBeach" method="POST">
         <input class="input-form text" type="text" placeholder="Beach Name" name="beachName">
-        <input class="input-form text" type="text" placeholder="Facilities" name="facilities">
+        <legend class="input-form">Restroom</legend>
+        <input class="input-form" type="radio" value="yes" name="restroom">
+            <label class="input-form" for="yes">Yes</label>
+        <input class="input-form" type="radio" value="no" name="restroom" checked>
+            <label class="input-form" for="no">No</label>
         <legend class="input-form">Lifeguard</legend>
         <input class="input-form" type="radio" value="yes" name="lifeguard">
             <label class="input-form" for="yes">Yes</label>
