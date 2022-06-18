@@ -10,8 +10,9 @@ Array.from(thumbText).forEach((element)=>{
 })
 
 async function deleteBeach(){
-    const sName = this.parentNode.childNodes[1].innerText
-    const bName = this.parentNode.childNodes[3].innerText
+    const sName = this.parentNode.parentNode.childNodes[1].innerText
+    const bName = this.parentNode.parentNode.childNodes[3].innerText
+    console.log(bName)
     try{
         const response = await fetch('deleteBeach', {
             method: 'delete',
@@ -31,10 +32,10 @@ async function deleteBeach(){
 }
 
 async function addLike(){
-    const sName = this.parentNode.childNodes[1].innerText
-    const bName = this.parentNode.childNodes[3].innerText
-    const lName = this.parentNode.childNodes[5].innerText
-    const tLikes = Number(this.parentNode.childNodes[7].innerText)
+    const sName = this.parentNode.parentNode.childNodes[1].innerText
+    const bName = this.parentNode.parentNode.childNodes[3].innerText
+    const lName = this.parentNode.parentNode.childNodes[5].innerText
+    const tLikes = Number(this.parentNode.parentNode.childNodes[7].innerText)
 
     try{
         const response = await fetch('addOneLike', {

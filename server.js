@@ -30,7 +30,7 @@ app.get('/',(request, response)=>{
 
 app.post('/addBeach', (request, response) => {
     db.collection('beaches').insertOne({beachName: request.body.beachName,
-    facilities: request.body.facilities, lifeguard: request.body.lifeguard, likes: 0})
+    restroom: request.body.restroom, lifeguard: request.body.lifeguard, likes: 0})
     .then(result => {
         console.log('Beach Added')
         response.redirect('/')
@@ -40,7 +40,7 @@ app.post('/addBeach', (request, response) => {
 
 app.put('/addOneLike', (request, response) => {
     console.log(response.body)
-    db.collection('beaches').updateOne({beachName: request.body.beachName, birthName: request.body.birthNameS,likes: request.body.likesS},{
+    db.collection('beaches').updateOne({beachName: request.body.beachName, restroom: request.body.restroom,likes: request.body.likesS},{
         $set: {
             likes:request.body.likesS + 1
           }

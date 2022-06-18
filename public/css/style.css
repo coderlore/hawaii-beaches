@@ -1,6 +1,6 @@
 html{
-    /* color: white;
-    background-color: black; */
+    color: white;
+    background-color: black;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -9,7 +9,11 @@ h1{
     color: red;
 }
 
-.beaches{
+.titles {
+    text-align: left;
+}
+
+.beaches, .titles{
     list-style: none;
     position: relative;
     display: inline-block;
@@ -27,11 +31,15 @@ span{
 }
 
 .beach > span {
-    border: 2px blue solid;
     display:inline-block;
     float: left;
     min-width: 50px;
     /* width: 15%; */
+}
+
+.beach > span:first-child {
+    min-width: 125px;
+    text-align: left;
 }
 
 .icons {
